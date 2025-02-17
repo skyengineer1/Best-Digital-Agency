@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#navbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar {
+    background: linear-gradient(to right, rgb(230, 0, 255), rgb(150, 0, 150));
+    padding: 0 1em !important;
+}
+
+.navbar-nav li {
+    padding: 0 1em;
+}
+
+.navbar-nav li a {
+    color: white !important;
+    font-weight: bold;
+    float: right;
+}
+
+.fa-solid {
+    color: white;
+    font-size: 1.6rem;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+#banner {
+    background: linear-gradient(to right, rgb(230, 0, 255), rgb(150, 0, 150));
+    padding: 5em 10em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-image {
+    width: 3em;
+    height: 3em;
+    cursor: pointer;
+}
+
+.banner-header {
+    color: white;
+    font-weight: bold;
+}
+
+.banner-description {
+    color: white;
+    text-align: justify;
+}
+
+.banner-actual-link {
+    color: white;
+    text-decoration: none;
+}
+
+.banner-link {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    align-items: center;
+}
+
+.banner-actual-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.left-side-banner {
+    flex-basis: 50%;
+}
+
+.right-side-banner {
+    flex-basis: 50%;
+}
+
+.bottom-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+#services {
+    padding: 5em;
+    max-width: 90%;
+    margin: auto;
+}
+
+.services-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+}
+
+.services-grid-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+.services-grid-image {
+    width: 15em;
+    height: 15em;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.services-grid-description {
+    font-style: italic;
+}
+
+.services-header {
+    text-align: center;
+    padding-bottom: 2em;
+    font-size: 3rem;
+    font-weight: 600;
+    padding-top: 2em;
+}
+
+.services-button {
+    text-align: center;
+    padding-top: 3em;
+}
+
+.services-btn {
+    background: linear-gradient(to right, rgb(230, 0, 255), rgb(150, 0, 150));
+    padding: 1em 2em;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 2em;
+    cursor: pointer;
+}
+
+.services-btn:hover {
+    box-shadow: 1px 2px 2px 1px lightgray;
+}
+
+.services-btn:active {
+    box-shadow: none;
+}
+
+#about {
+    padding: 5em;
+    background-color: rgb(255, 227, 231);
+}
+
+.about-flex-container {
+    display: flex;
+    flex-direction: row;
+    padding: 5em 2em;
+    align-items: center;
+}
+
+.left-side-about {
+    flex-basis: 50%;
+}
+
+.right-side-about {
+    flex-basis: 50%;
+}
+
+.about-header {
+    font-weight: bold;
+    text-align: center;
+}
+
+ul li {
+    padding: 1em 0;
+}
+
+.about-image {
+    width: 100%;
+    height: auto;
+}
+
+#testimonials {
+    padding: 5em 10em;
+}
+
+.testimonials-head {
+    text-align: center;
+    padding-bottom: 2em;
+    font-weight: bold;
+}
+
+.testimonials-flex-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.user-image {
+    width: 6em;
+    height: 6em;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.testimonials-flex-box {
+    max-width: 40em;
+    margin: auto;
+    border-left: 1px solid purple;
+    padding: 0 2em;
+}
+
+.testimonials-flex-profile {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    align-items: center;
+}
+
+.profile-name {
+    font-weight: bold;
+}
+
+.testimonials-flex-description {
+    font-style: italic;
+}
+
+@media only screen and (max-width: 1080px) {
+    .banner-actual-image {
+      max-width: 25em;
+    }
+    #banner {
+        padding: 3em 6em;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    #banner {
+        flex-direction: column;
+    }
+
+    .left-side-banner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .banner-link {
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .banner-header {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .banner-header {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 1680px) {
+    .services-grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    #services {
+        padding: 2em;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .about-flex-container {
+        flex-direction: column;
+        padding: 1em;
+    }
+}
+
+@media only screen and (max-width: 940px) {
+    .testimonials-flex-container {
+        flex-direction: column;
+        gap: 2em;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    #testimonials {
+        padding: 2em 4em;
+    }
+}
